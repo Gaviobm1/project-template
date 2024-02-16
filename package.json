@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack"
+    "watch": "webpack",
+    "gitpages": "git add dist && git commit -m \"Initial dist subtree commit\"",
+    "gitsubtreepush": "git subtree push --prefix dist origin gh-pages"
   },
   "keywords": [],
   "author": "",
