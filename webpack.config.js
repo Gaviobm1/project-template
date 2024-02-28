@@ -22,6 +22,18 @@ module.exports = {
         test: /\.(gif|jpeg|jpg|svg|png|bmp|ico|tiff|webp|avif|apng)$/i,
         type: "asset/resource",
       },
+      {
+      test: /\.(?:js|mjs|cjs)$/,
+      exclude: /node_modules/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            ['@babel/preset-env', { targets: "defaults" }]
+          ]
+        }
+      }
+    },
     ],
   },
   plugins: [
